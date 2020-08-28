@@ -92,3 +92,39 @@
 					  "detail":"No carrier found"
 					}
 					```
+				- **200** - If the carrier is found, return a dictionary with all the information.
+
+					**Eschema:**
+					```json
+					{
+					    "broker_id":0,
+					    "carrier_id":0,
+					    "lower_limit":[
+					        0
+					    ],
+					    "upper_limit":[
+					        0
+					    ],
+					    "fee":[
+					        0
+					    ],
+					    "is_active":false,
+					    "id":0
+					}
+					```
+				- **422** - Unprocessable entity.
+
+					**Eschema**
+					```json
+					{
+					    "detail":[
+					        {
+					            "loc":[
+					                "string"
+					            ],
+					            "msg":"string",
+					            "type":"string"
+					        }
+					    ]
+					}
+					```
