@@ -15,10 +15,13 @@
 # CFT (cubic feet)
 <a name="service-name-cft"></a>
 **Service name:** cft
+
 <a name="base-url-cft"></a>
 **Base URL:** [http://cft/api/cft](http://cft/api/cft/)
+
 <a name="endpoints-cft"></a>
  **Endpoints:**
+ 
 <a name="get-cft"></a>
 - **GET:**
 	 -   **Get all:**
