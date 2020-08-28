@@ -38,12 +38,12 @@
 	   
 			   - **404** - If no carrier is found.
 			   
-			   	**Eschema:**
-				```json
-				{
-				    "detail":"No carriers found"
-				}
-				```
+				   	**Eschema:**
+					```json
+					{
+					    "detail":"No carriers found"
+					}
+					```
 				- **200** - If at least one carrier is found, return a list with the carriers found.
 				
 					**Eschema:**
@@ -83,9 +83,9 @@
 		   - **Responses:**
 			   - **404** - If no carrier is found.
 			   
-			   	**Eschema:**
-				```json
-				{
-				  "detail":"No carrier found"
-				}
-				```
+				   	**Eschema:**
+					```json
+					{
+					  "detail":"No carrier found"
+					}
+					```
