@@ -18,7 +18,7 @@
 
 # Standard microservices
 <a name="service-name-standard"></a>
-**Services names:** cubic-capacity, height, width, length-per-piece, single-shipment, pieces, cft, weight-per-piece, total-weight, liftgate-dims, liftgate-weight.
+**Services names:** cubic-capacity, height, width, length-per-piece, single-shipment, pieces, cft, weight-per-piece, total-weight, liftgate-weight.
 
 <a name="base-url-standard"></a>
 **Base URL:** [http://BR-service-name/api/BR-service-name](http://BR-service-name/api/BR-service-name/)
@@ -343,9 +343,8 @@
 			- **pieces:** Get the pieces of the load, e. g: "5 pallets"
 			- **cft:** Get the cubic feet, e.g: "10 cft".
 			- **weight-per-piece:** Get the weight of the piece, e. g: "200 lbs"
-			- total-weight: Get the weight of the load, e. g: "200 lbs"
-			- liftgate-dims: Get the dimension of the piece, e. g: "48x48x48 inches"
-			- liftgate-weight: Get the weight of the piece, e. g: "200 lbs"
+			- **total-weight:** Get the weight of the load, e. g: "200 lbs"
+			- **liftgate-weight:** Get the weight of the piece, e. g: "200 lbs"
 
 			**Broker_id:** Integer, greater or equal than 0. 
 			**Carriers_id:** List of the carriers of a broker to be checked. List of integers, each one greater or equal than 0.
