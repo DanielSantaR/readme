@@ -58,6 +58,8 @@ Gazelle is the platform for the cognitive assistant for brokers. It is composed 
 	    + [PUT](#put-accessorial)
 	    + [DELETE](#delete-accessorial)
 
+---
+
 # Admin microservice
 
 <a name="service-name-admin"></a>
