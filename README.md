@@ -450,7 +450,7 @@
 			
 			---
 
-			`**Note:** The upper_limit, lower_limit and fee arrangements must be the same size.`
+			**Note:** The upper_limit, lower_limit and fee arrangements must be the same size.
 			
 			---
 	   
