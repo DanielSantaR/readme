@@ -228,7 +228,11 @@
 			**Is_active:** If for the quote the carrier must be evaluated in this business rule (True) or if it is included automatically (False).
 			
 
-			`**Note:** The upper_limit, lower_limit and fee arrangements must be the same size.`
+			---
+
+			**Note:** The upper_limit, lower_limit and fee arrangements must be the same size.
+			
+			---
 
 	   
 		   - **Responses:**
@@ -443,8 +447,12 @@
 			**Fee:** List of floats, greater than zero, representing all the rates for the ranges defined above.
 			
 			**Is_active:** If for the quote the carrier must be evaluated in this business rule (True) or if it is included automatically (False).
+			
+			---
 
 			`**Note:** The upper_limit, lower_limit and fee arrangements must be the same size.`
+			
+			---
 	   
 		   - **Responses:**
 	   
