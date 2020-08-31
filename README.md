@@ -11,7 +11,7 @@
 	    + [POST](#post-standard)
 	    + [PUT](#put-standard)
 	    + [DELETE](#delete-standard)
-- [Accessorial microservice](#accessorial-microservices)
+- [Accessorial microservice](#accessorial-microservice)
 	 * [Service name](#service-name-accessorial)
 	 * [Base URL](#base-url-accessorial)
 	 *  [Endpoints](#endpoints-accessorial)
