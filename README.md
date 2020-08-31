@@ -552,7 +552,8 @@
 					0
 					```
 
-# Accessorials microservice
+# Accessorial microservice
+
 <a name="service-name-accessorial"></a>
 **Service name:** accessorial.
 
