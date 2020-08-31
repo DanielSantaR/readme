@@ -133,11 +133,10 @@
 					```
 			
 
-	 - **Get fees:**
-	 
+	 - **Get fees:** 
 		 - **Url:** `base_url + /get_fees/{broker_id}/{carrier_id}`
 
-		 - **Description:** get the fees of a specific carrier for the cft rule
+		  - **Description:** get the fees of a specific carrier for the cft rule
 	   
 		   - **Path params:** 
 				- broker_id - integer, minimum zero.
@@ -462,4 +461,49 @@
 					{
 					    "detail":"No carrier found"
 					}
+					```
+
+<a name="delete-cft"></a>
+ - **DELETE:**
+	 -   **Remove:**
+
+		 - **Url:** `base_url + /{broker_id}/{carrier_id}`
+
+		  - **Description:** Delete a carrier
+	   
+		   - **Path params:** 
+				- broker_id - integer, minimum zero.
+				- carrier_id - integer, minimum zero.
+	   
+		   - **Query params:** None
+	   
+		   - **Request body:** None
+	   
+		   - **Responses:**
+	   
+			   - **422** - Unprocessable Entity.
+			   
+				   	**Eschema:**
+					```json
+					{
+					    "detail":[
+					        {
+					            "loc":[
+					                "string"
+					            ],
+					            "msg":"string",
+					            "type":"string"
+					        }
+					    ]
+					}
+					```
+				- **204** -   Carrier deleted.
+				
+					**Eschema:** None
+
+				- **404** -     Carrier not found.
+				
+					**Eschema:**
+					```json
+					0
 					```
