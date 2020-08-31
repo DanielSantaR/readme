@@ -3,6 +3,13 @@
 
 # Table of content
 - [Admin microservice](#Admin-microservice)
+ 	 * [Service name](#service-name-standard)
+	 * [Base URL](#base-url-standard)
+	 *  [Endpoints](#endpoints-standard)
+	    + [GET](#get-standard)
+	    + [POST](#post-standard)
+	    + [PUT](#put-standard)
+	    + [DELETE](#delete-standard)
 - [Standard microservices](#standard-microservices)
 	 * [Service name](#service-name-standard)
 	 * [Base URL](#base-url-standard)
@@ -11,7 +18,7 @@
 	    + [POST](#post-standard)
 	    + [PUT](#put-standard)
 	    + [DELETE](#delete-standard)
-- [Accessorial microservice](#accessorial-microservice)
+- [Accessorial microservice](#accessorial-microservices)
 	 * [Service name](#service-name-accessorial)
 	 * [Base URL](#base-url-accessorial)
 	 *  [Endpoints](#endpoints-accessorial)
@@ -22,11 +29,248 @@
 
 # Admin microservice
 
-  
+  <a name="base-url-admin"></a>
+**Base URL:** [http://admin/api/admin](http://admin/api/admin/)
+
+<a name="endpoints-admin"></a>
+ **Endpoints:**
+ 
+<a name="get-admin"></a>
+ - **GET:** None
+
+<a name="post-admin"></a>
+ - **POST:** 
+	 -   **Create:**
+
+		 - **Url:** `base_url + /post/create/`
+
+		  - **Description:** Create a new carrier
+	   
+		   - **Path params:** None
+	   
+		   - **Query params:** None
+	   
+		   - **Request body:** 
+			```json
+			{
+			  "business_rule": "string",
+			  "data": {}
+			}
+			```
+				
+			**Business_rule:** Business rule service name.
+			
+			**Data:** JSON required for the creation of the carrier in each business rule. For the available schemes and rules, see the following sections.
+			
+		   - **Responses:**
+	   
+			   - **422** - Unprocessable Entity.
+			   
+				   	**Eschema:**
+					```json
+					{
+					    "detail":[
+					        {
+					            "loc":[
+					                "string"
+					            ],
+					            "msg":"string",
+					            "type":"string"
+					        }
+					    ]
+					}
+					```
+				- **200** - If the carrier is created successfully.
+				
+					**Eschema:** Returns all carrier information created according to the business rule.
+				- **400** - Bad request.
+				
+					**Eschema:** 
+
+					```json
+					{
+					  "detail": "bad request"
+					}
+					```
+
+	 -   **Get by id:**
+
+		 - **Url:** `base_url + /get/id/`
+
+		  - **Description:** Get a carrier by means of its primary key, according to the business rule.
+	   
+		   - **Path params:** None
+	   
+		   - **Query params:** None
+	   
+		   - **Request body:** 
+			```json
+			{
+			  "business_rule": "string",
+			  "params": [
+			    "string"
+			  ]
+			}
+			```
+				
+			**Business_rule:** Business rule service name.
+			
+			**Params:** List of parameters needed to find the carrier in each business rule. For the available schemes and rules, see the following sections.
+			
+		   - **Responses:**
+	   
+			   - **422** - Unprocessable Entity.
+			   
+				   	**Eschema:**
+					```json
+					{
+					    "detail":[
+					        {
+					            "loc":[
+					                "string"
+					            ],
+					            "msg":"string",
+					            "type":"string"
+					        }
+					    ]
+					}
+					```
+				- **200** - If the carrier is created successfully.
+				
+					**Eschema:** Returns all carrier information created according to the business rule.
+				- **400** - Bad request.
+				
+					**Eschema:** 
+
+					```json
+					{
+					  "detail": "bad request"
+					}
+					```
+
+	 -   **Get all:**
+
+		 - **Url:** `base_url + /get/all/`
+
+		  - **Description:** Get all carriers, according to the business rule.
+	   
+		   - **Path params:** None
+	   
+		   - **Query params:** None
+	   
+		   - **Request body:** 
+			```json
+			{
+			  "business_rule": "string"
+			}
+			```
+				
+			**Business_rule:** Business rule service name.
+			
+		   - **Responses:**
+	   
+			   - **422** - Unprocessable Entity.
+			   
+				   	**Eschema:**
+					```json
+					{
+					    "detail":[
+					        {
+					            "loc":[
+					                "string"
+					            ],
+					            "msg":"string",
+					            "type":"string"
+					        }
+					    ]
+					}
+					```
+				- **200** - If the carrier is created successfully.
+				
+					**Eschema:** Returns a list with all carriers information created according to the business rule.
+				- **400** - Bad request.
+				
+					**Eschema:** 
+
+					```json
+					{
+					  "detail": "bad request"
+					}
+					```
+
+	 -   **Count:**
+
+		 - **Url:** `base_url + /post/count/`
+
+		  - **Description:** Get the total number of carriers according to the parameters sent.
+	   
+		   - **Path params:** None
+	   
+		   - **Query params:** None
+	   
+		   - **Request body:** 
+			```json
+			{
+			  "business_rule": "string",
+			  "data": {}
+			}
+			```
+				
+			**Business_rule:** Business rule service name.
+			
+			**Data:** The parameters by which you want to count the carriers, according to each business rule.
+			
+		   - **Responses:**
+	   
+			   - **422** - Unprocessable Entity.
+			   
+				   	**Eschema:**
+					```json
+					{
+					    "detail":[
+					        {
+					            "loc":[
+					                "string"
+					            ],
+					            "msg":"string",
+					            "type":"string"
+					        }
+					    ]
+					}
+					```
+				- **200** - If the carrier is created successfully.
+				
+					**Eschema:** Returns an integer.
+					
+				- **400** - Bad request.
+				
+					**Eschema:** 
+
+					```json
+					{
+					  "detail": "bad request"
+					}
+					```
 
 # Standard microservices
 <a name="service-name-standard"></a>
-**Services names:** cubic-capacity, height, width, length-per-piece, single-shipment, pieces, cft, weight-per-piece, total-weight, liftgate-weight.
+**Services names:** 
+
+ - cubic-capacity: https://github.com/guanes/gazelle-br-cubic-capacity/
+ - height: https://github.com/guanes/gazelle-br-height
+ - width: https://github.com/guanes/gazelle-br-width
+ - length-per-piece: https://github.com/guanes/gazelle-br-lenght-per-piece
+ - single-shipment: https://github.com/guanes/gazelle-br-single-shipment
+ - pieces: https://github.com/guanes/gazelle-br-pieces
+ - cft: https://github.com/guanes/gazelle-br-cft
+ - weight-per-piece: https://github.com/guanes/gazelle-br-weight-per-piece
+ - total-weight: https://github.com/guanes/gazelle-br-total-weight
+ - liftgate-weight: https://github.com/guanes/gazelle-br-liftgate-weight
+
+---
+**Note:** The most updated is in the develop branch.
+
+---
 
 <a name="base-url-standard"></a>
 **Base URL:** [http://BR-service-name/api/BR-service-name](http://BR-service-name/api/BR-service-name/)
@@ -552,10 +796,9 @@
 					0
 					```
 
-# Accessorial microservice
-
+# Accessorials microservice
 <a name="service-name-accessorial"></a>
-**Service name:** accessorial.
+**Services names:** cubic-capacity, height, width, length-per-piece, single-shipment, pieces, cft, weight-per-piece, total-weight, liftgate-weight.
 
 <a name="base-url-accessorial"></a>
 **Base URL:** [http://accessorial/api/accessorial](http://accessorial/api/accessorial/)
@@ -714,7 +957,7 @@
 					}
 					```
 
-<a name="post-accessorial"></a>
+<a name="post-standard"></a>
  - **POST:**
 	 -   **Create:**
 
@@ -874,6 +1117,22 @@
 			   - **422** - Unprocessable Entity.
 			   
 				   	**Eschema:**
+					```json
+					{
+					    "detail":[
+					        {
+					            "loc":[
+					                "string"
+					            ],
+					            "msg":"string",
+					            "type":"string"
+					        }
+					    ]
+					}
+					```
+				- **200** - Carriers available and carriers excluded
+				
+					**Eschema:**
 					```json
 					{
 					  "available_carriers": [
