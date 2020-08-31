@@ -554,7 +554,7 @@
 
 # Accessorials microservice
 <a name="service-name-accessorial"></a>
-**Services names:** cubic-capacity, height, width, length-per-piece, single-shipment, pieces, cft, weight-per-piece, total-weight, liftgate-weight.
+**Service name:** accessorial.
 
 <a name="base-url-accessorial"></a>
 **Base URL:** [http://accessorial/api/accessorial](http://accessorial/api/accessorial/)
@@ -713,7 +713,7 @@
 					}
 					```
 
-<a name="post-standard"></a>
+<a name="post-accessorial"></a>
  - **POST:**
 	 -   **Create:**
 
