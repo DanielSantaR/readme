@@ -133,21 +133,22 @@
 					```
 			
 
-	 - **Get fees:** 
+	 - **Get fees:**
 	 
-		  - **Url:** `base_url + /get_fees/{broker_id}/{carrier_id}`
+		 - **Url:** `base_url + /get_fees/{broker_id}/{carrier_id}`
 
 		  - **Description:** get the fees of a specific carrier for the cft rule
 	   
-		   - **Path params:** 
+		  - **Path params:** 
 				- broker_id - integer, minimum zero.
 				- carrier_id - integer, minimum zero.
 	   
-		   - **Query params:** None
+		  - **Query params:** None
 	   
-		   - **Request body:** None
+		  - **Request body:** None
 	   
-		   - **Responses:**
+		  - **Responses:**
+		  
 			   - **404** - If no carrier is found.
 			   
 				   	**Eschema:**
@@ -156,7 +157,7 @@
 					  "detail":"No carrier found"
 					}
 					```
-				- **200** - If the carrier is found, return a dictionary with the fee.
+			   - **200** - If the carrier is found, return a dictionary with the fee.
 
 					**Eschema:**
 					```json
@@ -166,7 +167,7 @@
 						  "fee": 0
 						}
 					```
-				- **422** - Unprocessable entity.
+			   - **422** - Unprocessable entity.
 
 					**Eschema**
 					```json
