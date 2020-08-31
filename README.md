@@ -216,11 +216,17 @@
 			```
 				
 			**Broker_id:** Integer, greater or equal than 0. 
+			
 			**Carrier_id:** Integer, greater or equal than 0.
+			
 			**Lower_limit:** List of floats, greater than zero, that represent all the lower limits of the ranges for this rule.
+			
 			**Upper_limit:** List of floats, greater than zero, that represent all the upper limits of the ranges for this rule.
+			
 			**Fee:** List of floats, greater than zero, representing all the rates for the ranges defined above.
+			
 			**Is_active:** If for the quote the carrier must be evaluated in this business rule (True) or if it is included automatically (False).
+			
 
 			**Note:** The upper_limit, lower_limit and fee arrangements must be the same size.
 
@@ -284,8 +290,11 @@
 			}
 			```
 			**id:**  Unique ID for a broker's carrier in the business rule. Integer greater or equal than 0.
+			
 			**Broker_id:** Integer, greater or equal than 0. 
+			
 			**Carrier_id:** Integer, greater or equal than 0.
+			
 			**Is_active:** If for the quote the carrier must be evaluated in this business rule (True) or if it is included automatically (False).
 	   
 		   - **Responses:**
@@ -347,6 +356,7 @@
 			- **liftgate-weight:** Get the weight of the piece, e. g: "200 lbs"
 
 			**Broker_id:** Integer, greater or equal than 0. 
+			
 			**Carriers_id:** List of the carriers of a broker to be checked. List of integers, each one greater or equal than 0.
 	   
 		   - **Responses:**
@@ -427,8 +437,11 @@
 			```
 
 			**Lower_limit:** List of floats, greater than zero, that represent all the lower limits of the ranges for this rule.
+			
 			**Upper_limit:** List of floats, greater than zero, that represent all the upper limits of the ranges for this rule.
+			
 			**Fee:** List of floats, greater than zero, representing all the rates for the ranges defined above.
+			
 			**Is_active:** If for the quote the carrier must be evaluated in this business rule (True) or if it is included automatically (False).
 
 			**Note:** The upper_limit, lower_limit and fee arrangements must be the same size.
