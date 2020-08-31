@@ -1,37 +1,38 @@
 
+
 # Table of content
 - [Admin microservice](#Admin-microservice)
-- [CFT (cubic feet)](#CFT-(cubic-feet))
-	 * [Service name](#service-name-cft)
-	 * [Base URL](#base-url-cft)
-	 *  [Endpoints](#endpoints-cft)
-	    + [GET](#get-cft)
-	    + [POST](#post-cft)
-	    + [PUT](#put-cft)
-	    + [DELETE](#delete-cft)
+- [Standard microservices](#standard-microservices)
+	 * [Service name](#service-name-standar)
+	 * [Base URL](#base-url-standar)
+	 *  [Endpoints](#endpoints-standar)
+	    + [GET](#get-estandar)
+	    + [POST](#post-standar)
+	    + [PUT](#put-standar)
+	    + [DELETE](#delete-standar)
 
 
 # Admin microservice
 
   
 
-# CFT (cubic feet)
-<a name="service-name-cft"></a>
-**Service name:** cft
+# Standard microservices
+<a name="service-name-standar"></a>
+**Services names:** cubic-capacity, height, width, length-per-piece, single-shipment, pieces, cft, weight-per-piece, total-weight, liftgate-dims, liftgate-weight.
+<a name="base-url-standard"></a>
+**Base URL:** [http://BR-service-name/api/BR-service-name](http://BR-service-name/api/BR-service-name/)
 
-<a name="base-url-cft"></a>
-**Base URL:** [http://cft/api/cft](http://cft/api/cft/)
-
-<a name="endpoints-cft"></a>
+<a name="endpoints-standar"></a>
  **Endpoints:**
- 
-<a name="get-cft"></a>
+
+
+<a name="get-standar"></a>
  - **GET:**
 	 -   **Get all:**
 
 		 - **Url:** `base_url + /`
 
-		  - **Description:** Get all the carriers saved in the database from the cft
+		  - **Description:** Get all the carriers saved in the database from the business rule
 	   table.
 	   
 		   - **Path params:** None
@@ -137,7 +138,7 @@
 	 
 		 - **Url:** `base_url + /get_fees/{broker_id}/{carrier_id}`
 
-		  - **Description:** get the fees of a specific carrier for the cft rule
+		  - **Description:** get the fees of a specific carrier for the business rule
 	   
 		  - **Path params:** 
 				- broker_id - integer, minimum zero.
@@ -184,7 +185,7 @@
 					}
 					```
 
-<a name="post-cft"></a>
+<a name="post-standar"></a>
  - **POST:**
 	 -   **Create:**
 
@@ -332,7 +333,20 @@
 			    ]
 			}
 			```
-			**Restriction:** The entity as it comes in the quotation after being standardized. For example: "15 cft".
+			**Restriction:** The entity as it comes in the quotation after being standardized.
+	
+			- **cubic-capacity:**  Get the cubic feet, e.g: "10 cft".
+			- **height:** Get the dimension of the piece, e. g: "48x48x48 inches"
+			- **width:** Get the dimension of the piece, e. g: "48x48x48 inches"
+			- **length-per-piece:** Get the dimension of the piece, e. g: "48x48x48 inches"
+			- **single-shipment:** Get the weight of the load, e. g: "200 lbs"
+			- **pieces:** Get the pieces of the load, e. g: "5 pallets"
+			- **cft:** Get the cubic feet, e.g: "10 cft".
+			- **weight-per-piece:** Get the weight of the piece, e. g: "200 lbs"
+			- total-weight: Get the weight of the load, e. g: "200 lbs"
+			- liftgate-dims: Get the dimension of the piece, e. g: "48x48x48 inches"
+			- liftgate-weight: Get the weight of the piece, e. g: "200 lbs"
+
 			**Broker_id:** Integer, greater or equal than 0. 
 			**Carriers_id:** List of the carriers of a broker to be checked. List of integers, each one greater or equal than 0.
 	   
@@ -383,7 +397,7 @@
 					}
 					```
 
-<a name="put-cft"></a>
+<a name="put-standar"></a>
  - **PUT:**
 	 -   **Update:**
 
@@ -465,7 +479,7 @@
 					}
 					```
 
-<a name="delete-cft"></a>
+<a name="delete-standar"></a>
  - **DELETE:**
 	 -   **Remove:**
 
