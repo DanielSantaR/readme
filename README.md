@@ -134,7 +134,8 @@
 			
 
 	 - **Get fees:** 
-		 - **Url:** `base_url + /get_fees/{broker_id}/{carrier_id}`
+	 
+		  - **Url:** `base_url + /get_fees/{broker_id}/{carrier_id}`
 
 		  - **Description:** get the fees of a specific carrier for the cft rule
 	   
