@@ -1,4 +1,34 @@
 
+<h1  align="center">Gazelle 🦌</h1>
+
+
+![Test Actions Status](https://github.com/guanes/gazelle-br-admin/workflows/CI/badge.svg)
+![Build Image Actions Status](https://github.com/guanes/gazelle-br-admin/workflows/google/badge.svg)
+
+
+<p>
+
+<img  alt="Version"  src="https://img.shields.io/badge/version-0.0.1-blue.svg?cacheSeconds=2592000"  />
+
+<a  href="[https://twitter.com/guaneAI](https://twitter.com/guaneAI)"  target="_blank">
+
+<img  alt="Twitter: GuaneAI"  src="https://img.shields.io/twitter/follow/guaneAI.svg?style=social"  />
+
+</a>
+
+</p>
+
+  
+
+***
+
+  
+
+Gazelle is the platform for the cognitive assistant for brokers. It is composed of many microservices built on the hexagonal architecture and Test-driven development (TDD) scheme.
+
+  
+
+---
 
 
 
