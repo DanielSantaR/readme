@@ -3,13 +3,13 @@
 # Table of content
 - [Admin microservice](#Admin-microservice)
 - [Standard microservices](#standard-microservices)
-	 * [Service name](#service-name-standar)
-	 * [Base URL](#base-url-standar)
-	 *  [Endpoints](#endpoints-standar)
-	    + [GET](#get-estandar)
-	    + [POST](#post-standar)
-	    + [PUT](#put-standar)
-	    + [DELETE](#delete-standar)
+	 * [Service name](#service-name-standard)
+	 * [Base URL](#base-url-standard)
+	 *  [Endpoints](#endpoints-standard)
+	    + [GET](#get-standard)
+	    + [POST](#post-standard)
+	    + [PUT](#put-standard)
+	    + [DELETE](#delete-standard)
 
 
 # Admin microservice
@@ -17,16 +17,16 @@
   
 
 # Standard microservices
-<a name="service-name-standar"></a>
+<a name="service-name-standard"></a>
 **Services names:** cubic-capacity, height, width, length-per-piece, single-shipment, pieces, cft, weight-per-piece, total-weight, liftgate-dims, liftgate-weight.
+
 <a name="base-url-standard"></a>
 **Base URL:** [http://BR-service-name/api/BR-service-name](http://BR-service-name/api/BR-service-name/)
 
-<a name="endpoints-standar"></a>
+<a name="endpoints-standard"></a>
  **Endpoints:**
-
-
-<a name="get-standar"></a>
+ 
+<a name="get-standard"></a>
  - **GET:**
 	 -   **Get all:**
 
@@ -185,7 +185,7 @@
 					}
 					```
 
-<a name="post-standar"></a>
+<a name="post-standard"></a>
  - **POST:**
 	 -   **Create:**
 
@@ -397,7 +397,7 @@
 					}
 					```
 
-<a name="put-standar"></a>
+<a name="put-standard"></a>
  - **PUT:**
 	 -   **Update:**
 
@@ -479,7 +479,7 @@
 					}
 					```
 
-<a name="delete-standar"></a>
+<a name="delete-standard"></a>
  - **DELETE:**
 	 -   **Remove:**
 
