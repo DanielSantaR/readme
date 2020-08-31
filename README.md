@@ -3,9 +3,9 @@
 
 # Table of content
 - [Admin microservice](#Admin-microservice)
- 	 * [Service name](#service-name-standard)
-	 * [Base URL](#base-url-standard)
-	 *  [Endpoints](#endpoints-standard)
+ 	 * [Service name](#service-name-admin)
+	 * [Base URL](#base-url-admin)
+	 *  [Endpoints](#endpoints-admin)
 	    + [GET](#get-admin)
 	    + [POST](#post-admin)
 	    + [PUT](#put-admin)
@@ -1153,7 +1153,7 @@
 					}
 					```
 
-<a name="post-standard"></a>
+<a name="post-accessorial"></a>
  - **POST:**
 	 -   **Create:**
 
