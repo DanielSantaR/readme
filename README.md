@@ -135,7 +135,7 @@
 					    ]
 					}
 					```
-				- **200** - If the carrier is created successfully.
+				- **200** -  Successful processing.
 				
 					**Eschema:** Returns all carrier information created according to the business rule.
 				- **400** - Bad request.
@@ -185,7 +185,7 @@
 					    ]
 					}
 					```
-				- **200** - If the carrier is created successfully.
+				- **200** -   Successful processing.
 				
 					**Eschema:** Returns a list with all carriers information created according to the business rule.
 				- **400** - Bad request.
@@ -218,7 +218,7 @@
 				
 			**Business_rule:** Business rule service name.
 			
-			**Data:** The parameters by which you want to count the carriers, according to each business rule.
+			**Data:** The parameters by which you want to count the carriers, according to each business rule. For the available schemes and rules, see the following sections.
 			
 		   - **Responses:**
 	   
@@ -238,7 +238,7 @@
 					    ]
 					}
 					```
-				- **200** - If the carrier is created successfully.
+				- **200** -  Successful processing.
 				
 					**Eschema:** Returns an integer.
 					
@@ -250,6 +250,202 @@
 					{
 					  "detail": "bad request"
 					}
+					```
+
+	 -   **Check carriers:**
+
+		 - **Url:** `base_url + /post/check/`
+
+		  - **Description:** Check the included and excluded carriers for a quote.
+	   
+		   - **Path params:** None
+	   
+		   - **Query params:** None
+	   
+		   - **Request body:** 
+			```json
+			{
+			  "business_rule": "string",
+			  "data": {}
+			}
+			```
+				
+			**Business_rule:** Business rule service name.
+			
+			**Data:** The parameters by which you want to count the carriers, according to each business rule. For the available schemes and rules, see the following sections.
+			
+		   - **Responses:**
+	   
+			   - **422** - Unprocessable Entity.
+			   
+				   	**Eschema:**
+					```json
+					{
+					    "detail":[
+					        {
+					            "loc":[
+					                "string"
+					            ],
+					            "msg":"string",
+					            "type":"string"
+					        }
+					    ]
+					}
+					```
+				- **200** -   Successful processing.
+				
+					**Eschema:**
+					```json
+					{
+					  "available_carriers": [
+					    {
+					      "broker_id": 0,
+					      "carrier_id": 0,
+					      "fee": 0
+					    }
+					  ],
+					  "exclude_lower_carriers": [
+					    {
+					      "broker_id": 0,
+					      "carrier_id": 0,
+					      "message": "string"
+					    }
+					  ],
+					  "exclude_upper_carriers": [
+					    {
+					      "broker_id": 0,
+					      "carrier_id": 0,
+					      "message": "string"
+					    }
+					  ]
+					}
+					```
+					
+				- **400** - Bad request.
+				
+					**Eschema:** 
+
+					```json
+					{
+					  "detail": "bad request"
+					}
+					```
+
+
+<a name="put-admin"></a>
+ - **PUT:**
+	 -   **Update:**
+
+		 - **Url:** `base_url + /put/update/`
+
+		  - **Description:** Update a carrier
+	   
+		   - **Path params:** None
+	   
+		   - **Query params:** None
+	   
+		   - **Request body:** 
+			```json
+			{
+			  "business_rule": "string",
+			  "params": [
+			    null
+			  ],
+			  "data": {}
+			}
+			```
+
+			**Business_rule:** Business rule service name.
+			
+			**Data:** The parameters by which you want to count the carriers, according to each business rule. For the available schemes and rules, see the following sections.
+
+			**Params:** List of parameters needed to find the carrier in each business rule. For the available schemes and rules, see the following sections.
+	   
+		   - **Responses:**
+	   
+			   - **422** - Unprocessable Entity.
+			   
+				   	**Eschema:**
+					```json
+					{
+					    "detail":[
+					        {
+					            "loc":[
+					                "string"
+					            ],
+					            "msg":"string",
+					            "type":"string"
+					        }
+					    ]
+					}
+					```
+				- **200** -   Carrier updated.
+				
+					**Eschema:** Returns a list with all carriers information created according to the business rule.
+
+				- **404** -     Carrier not found.
+				
+					**Eschema:**
+					```json
+					{
+					    "detail":"No carrier found"
+					}
+					```
+
+<a name="delete-admin"></a>
+ - **DELETE:**
+	 -   **Remove:**
+
+		 - **Url:** `base_url + /delete/`
+
+		  - **Description:** Delete a carrier
+	   
+		   - **Path params:** None
+	   
+		   - **Query params:** None
+	   
+		   - **Request body:** 
+
+				```json
+				{
+				  "business_rule": "string",
+				  "params": [
+				    null
+				  ]
+				}
+				```
+				
+				**Business_rule:** Business rule service name.
+
+				**Params:** List of parameters needed to find the carrier in each business rule. For the available schemes and rules, see the following sections.
+	   
+		   - **Responses:**
+	   
+			   - **422** - Unprocessable Entity.
+			   
+				   	**Eschema:**
+					```json
+					{
+					    "detail":[
+					        {
+					            "loc":[
+					                "string"
+					            ],
+					            "msg":"string",
+					            "type":"string"
+					        }
+					    ]
+					}
+					```
+				- **204** -   Carrier deleted.
+				
+					**Eschema:** None
+
+				- **404** -     Carrier not found.
+				
+					**Eschema:**
+					```json
+					0
 					```
 
 # Standard microservices
