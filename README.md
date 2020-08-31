@@ -29,6 +29,11 @@
 
 # Admin microservice
 
+<a name="service-name-admin"></a>
+**Services names:** 
+
+	- admin: https://github.com/guanes/gazelle-br-admin
+
   <a name="base-url-admin"></a>
 **Base URL:** [http://admin/api/admin](http://admin/api/admin/)
 
@@ -994,7 +999,9 @@
 
 # Accessorials microservice
 <a name="service-name-accessorial"></a>
-**Services names:** cubic-capacity, height, width, length-per-piece, single-shipment, pieces, cft, weight-per-piece, total-weight, liftgate-weight.
+**Services names:** 
+
+	- accessorial: https://github.com/guanes/gazelle-br-accessorial
 
 <a name="base-url-accessorial"></a>
 **Base URL:** [http://accessorial/api/accessorial](http://accessorial/api/accessorial/)
