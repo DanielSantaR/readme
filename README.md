@@ -876,42 +876,26 @@
 				   	**Eschema:**
 					```json
 					{
-					    "detail":[
-					        {
-					            "loc":[
-					                "string"
-					            ],
-					            "msg":"string",
-					            "type":"string"
-					        }
-					    ]
+					  "available_carriers": [
+					    {
+					      "broker_id": 0,
+					      "carrier_id": 0,
+					      "accessorial": "string",
+					      "fee": 0
+					    }
+					  ],
+					  "exclude_lower_carriers": [
+					    {
+					      "broker_id": 0,
+					      "carrier_id": 0,
+					      "accessorial": "string",
+					      "message": "Carrier cannot move loads with the accessorial"
+					    }
+					  ],
+					  "exclude_upper_carriers": [
+					    {}
+					  ]
 					}
-					```
-				- **200** - Carriers available and carriers excluded
-				
-					**Eschema:**
-					```json
-				{
-				  "available_carriers": [
-				    {
-				      "broker_id": 0,
-				      "carrier_id": 0,
-				      "accessorial": "string",
-				      "fee": 0
-				    }
-				  ],
-				  "exclude_lower_carriers": [
-				    {
-				      "broker_id": 0,
-				      "carrier_id": 0,
-				      "accessorial": "string",
-				      "message": "Carrier cannot move loads with the accessorial"
-				    }
-				  ],
-				  "exclude_upper_carriers": [
-				    {}
-				  ]
-				}
 					```
 
 <a name="put-accessorial"></a>
