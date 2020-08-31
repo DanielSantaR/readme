@@ -1,6 +1,7 @@
 
 
 
+
 # Table of content
 - [Admin microservice](#Admin-microservice)
  	 * [Service name](#service-name-admin)
@@ -32,9 +33,9 @@
 <a name="service-name-admin"></a>
 **Services names:** 
 
-	- admin: https://github.com/guanes/gazelle-br-admin
+- admin: https://github.com/guanes/gazelle-br-admin
 
-  <a name="base-url-admin"></a>
+ <a name="base-url-admin"></a>
 **Base URL:** [http://admin/api/admin](http://admin/api/admin/)
 
 <a name="endpoints-admin"></a>
@@ -1001,7 +1002,7 @@
 <a name="service-name-accessorial"></a>
 **Services names:** 
 
-	- accessorial: https://github.com/guanes/gazelle-br-accessorial
+- accessorial: https://github.com/guanes/gazelle-br-accessorial
 
 <a name="base-url-accessorial"></a>
 **Base URL:** [http://accessorial/api/accessorial](http://accessorial/api/accessorial/)
